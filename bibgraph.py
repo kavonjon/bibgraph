@@ -58,7 +58,7 @@ def main():
         for cit in entry:
             G.add_edge(key, cit)
 
-    pydot_G = nx.to_pydot(G)
+    pydot_G = nx.drawing.nx_pydot.to_pydot(G)
     for node in pydot_G.get_nodes():
         t = node.get_name()
         if t and tags.get(t):
